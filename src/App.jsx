@@ -639,7 +639,6 @@ const App = () => {
               </div>
               <h3 className="font-bold text-gray-900 dark:text-white mb-2">{t('email')}</h3>
               <p className="text-gray-600 dark:text-gray-300">slldio4654@gmail.com</p>
-              <p className="text-gray-600 dark:text-gray-300">amod76900@gmail.com</p>
             </motion.div>
 
             <motion.div
@@ -654,7 +653,6 @@ const App = () => {
               </div>
               <h3 className="font-bold text-gray-900 dark:text-white mb-2">{t('phone_number')}</h3>
               <p className="text-gray-600 dark:text-gray-300" dir="ltr">+967 770 076 900</p>
-              <p className="text-gray-600 dark:text-gray-300" dir="ltr">+967 784 455 100</p>
             </motion.div>
 
             <motion.div
@@ -690,7 +688,7 @@ const App = () => {
                 {t('send_message')}
               </motion.a>
               <motion.a
-                href="tel:+967770076900 & 784455100"
+                href="tel:+967770076900"
                 className="inline-flex items-center gap-2 px-6 py-3 border-2 border-blue-600 text-blue-600 dark:text-blue-400 rounded-lg hover:bg-blue-600 hover:text-white transition-colors"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
