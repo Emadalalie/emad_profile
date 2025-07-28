@@ -95,7 +95,15 @@ const App = () => {
     { name: 'MySQL', level: 92, icon: Database },
     { name: 'Flutter', level: 80, icon: Smartphone },
     { name: 'PHP', level: 85, icon: Code },
-    { name: 'C#', level: 82, icon: Code }
+    { name: 'C#', level: 82, icon: Code },
+    { name: 'Node.js', level: 78, icon: Server },
+    { name: 'MongoDB', level: 75, icon: Database },
+    { name: 'HTML/CSS', level: 95, icon: Globe },
+    { name: 'Bootstrap', level: 88, icon: Globe },
+    { name: 'Git/GitHub', level: 85, icon: Code },
+    { name: 'Linux', level: 80, icon: Server },
+    { name: 'Docker', level: 70, icon: Server },
+    { name: 'AWS', level: 65, icon: Server }
   ];
 
   const projects = [
@@ -119,6 +127,27 @@ const App = () => {
       technologies: ['PHP', 'C#', 'MySQL', 'HTML', 'CSS'],
       image: modernWebDesign,
       features: [t('data_sync'), t('visual_interface'), t('advanced_api'), t('high_security')]
+    },
+    {
+      title: 'نظام إدارة المكتبة الرقمية',
+      description: 'نظام شامل لإدارة المكتبات الرقمية مع إمكانيات البحث المتقدم وإدارة المستخدمين',
+      technologies: ['React', 'Node.js', 'MongoDB', 'Express.js', 'JWT'],
+      image: webDevHero,
+      features: ['بحث متقدم', 'إدارة المستخدمين', 'نظام الحجز', 'تقارير تفصيلية']
+    },
+    {
+      title: 'تطبيق التجارة الإلكترونية',
+      description: 'منصة تجارة إلكترونية متكاملة مع نظام دفع آمن وإدارة المخزون',
+      technologies: ['Flutter', 'Django REST', 'PostgreSQL', 'Redis', 'Stripe'],
+      image: programmingConcepts,
+      features: ['دفع آمن', 'إدارة المخزون', 'تتبع الطلبات', 'نظام التقييمات']
+    },
+    {
+      title: 'نظام إدارة الموارد البشرية',
+      description: 'نظام متكامل لإدارة الموارد البشرية مع إدارة الرواتب والحضور والانصراف',
+      technologies: ['C#', '.NET Core', 'SQL Server', 'Angular', 'Bootstrap'],
+      image: modernWebDesign,
+      features: ['إدارة الرواتب', 'تتبع الحضور', 'إدارة الإجازات', 'تقارير الأداء']
     }
   ];
 
@@ -126,7 +155,13 @@ const App = () => {
     { name: 'CCNA (Cisco Certified Network Associate)', year: '2024', issuer: 'المعهد العام للاتصالات' },
     { name: isRTL ? 'الرخصة الأوروبية لقيادة الحاسوب' : 'European Computer Driving License', year: '2019', issuer: 'المعهد العام للاتصالات' },
     { name: isRTL ? 'مقدمة في الأمن السيبراني' : 'Introduction to Cybersecurity', year: '2022', issuer: 'أكاديمية سيسكو' },
-    { name: isRTL ? 'إدارة تكنولوجيا المعلومات' : 'IT Management', year: '2023', issuer: 'أكاديمية أليسون' }
+    { name: isRTL ? 'إدارة تكنولوجيا المعلومات' : 'IT Management', year: '2023', issuer: 'أكاديمية أليسون' },
+    { name: isRTL ? 'تطوير تطبيقات الويب باستخدام Django' : 'Django Web Development', year: '2023', issuer: 'Coursera' },
+    { name: isRTL ? 'تطوير تطبيقات الموبايل باستخدام Flutter' : 'Flutter Mobile Development', year: '2023', issuer: 'Udemy' },
+    { name: isRTL ? 'إدارة قواعد البيانات MySQL' : 'MySQL Database Administration', year: '2022', issuer: 'Oracle' },
+    { name: isRTL ? 'أساسيات الحوسبة السحابية AWS' : 'AWS Cloud Fundamentals', year: '2024', issuer: 'Amazon Web Services' },
+    { name: isRTL ? 'إدارة المشاريع التقنية' : 'Technical Project Management', year: '2023', issuer: 'PMI' },
+    { name: isRTL ? 'تطوير واجهات المستخدم React' : 'React Frontend Development', year: '2024', issuer: 'Meta' }
   ];
 
   return (
@@ -609,6 +644,118 @@ const App = () => {
         </div>
       </section>
 
+      {/* Experience Section */}
+      <section id="experience" className="py-20 bg-white dark:bg-slate-800">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">{t('experience')}</h2>
+            <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
+          </motion.div>
+
+          <div className="max-w-4xl mx-auto">
+            {/* Experience Timeline */}
+            <div className="space-y-8">
+              <motion.div
+                initial={{ opacity: 0, x: isRTL ? 50 : -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+                className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 p-6 rounded-xl border-l-4 border-blue-600"
+              >
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white">مطور ويب متقدم - مستقل</h3>
+                  <span className="text-blue-600 dark:text-blue-400 font-semibold">2023 - الآن</span>
+                </div>
+                <p className="text-gray-600 dark:text-gray-300 mb-4">
+                  تطوير تطبيقات ويب متقدمة باستخدام Django وReact، مع التركيز على الأداء والأمان وتجربة المستخدم المتميزة.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {['Django', 'React', 'MySQL', 'AWS', 'Docker'].map((tech) => (
+                    <span key={tech} className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded-full text-sm">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: isRTL ? -50 : 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="bg-gradient-to-r from-green-50 to-blue-50 dark:from-green-900/20 dark:to-blue-900/20 p-6 rounded-xl border-l-4 border-green-600"
+              >
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white">مطور تطبيقات موبايل - Millunieumsoft</h3>
+                  <span className="text-green-600 dark:text-green-400 font-semibold">2022 - 2023</span>
+                </div>
+                <p className="text-gray-600 dark:text-gray-300 mb-4">
+                  تطوير تطبيقات موبايل متعددة المنصات باستخدام Flutter، مع التكامل مع أنظمة خلفية معقدة وواجهات برمجة التطبيقات.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {['Flutter', 'Dart', 'Firebase', 'REST APIs', 'Git'].map((tech) => (
+                    <span key={tech} className="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 rounded-full text-sm">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: isRTL ? 50 : -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                viewport={{ once: true }}
+                className="bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 p-6 rounded-xl border-l-4 border-purple-600"
+              >
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white">مطور ويب مبتدئ - متدرب</h3>
+                  <span className="text-purple-600 dark:text-purple-400 font-semibold">2021 - 2022</span>
+                </div>
+                <p className="text-gray-600 dark:text-gray-300 mb-4">
+                  بداية المسيرة المهنية في تطوير الويب، تعلم أساسيات البرمجة وتطوير مواقع ويب بسيطة باستخدام HTML وCSS وJavaScript.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL'].map((tech) => (
+                    <span key={tech} className="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-300 rounded-full text-sm">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </motion.div>
+            </div>
+
+            {/* Achievements */}
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              viewport={{ once: true }}
+              className="mt-16 grid md:grid-cols-3 gap-6"
+            >
+              <div className="text-center p-6 bg-blue-50 dark:bg-blue-900/20 rounded-xl">
+                <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">15+</div>
+                <div className="text-gray-600 dark:text-gray-300">مشروع مكتمل</div>
+              </div>
+              <div className="text-center p-6 bg-green-50 dark:bg-green-900/20 rounded-xl">
+                <div className="text-3xl font-bold text-green-600 dark:text-green-400 mb-2">3+</div>
+                <div className="text-gray-600 dark:text-gray-300">سنوات خبرة</div>
+              </div>
+              <div className="text-center p-6 bg-purple-50 dark:bg-purple-900/20 rounded-xl">
+                <div className="text-3xl font-bold text-purple-600 dark:text-purple-400 mb-2">10+</div>
+                <div className="text-gray-600 dark:text-gray-300">شهادة تقنية</div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section id="contact" className="py-20 bg-white dark:bg-slate-800">
         <div className="container mx-auto px-4">
@@ -639,6 +786,7 @@ const App = () => {
               </div>
               <h3 className="font-bold text-gray-900 dark:text-white mb-2">{t('email')}</h3>
               <p className="text-gray-600 dark:text-gray-300">slldio4654@gmail.com</p>
+              <p className="text-gray-600 dark:text-gray-300">amod76900@gmail.com</p>
             </motion.div>
 
             <motion.div
@@ -653,6 +801,7 @@ const App = () => {
               </div>
               <h3 className="font-bold text-gray-900 dark:text-white mb-2">{t('phone_number')}</h3>
               <p className="text-gray-600 dark:text-gray-300" dir="ltr">+967 770 076 900</p>
+              <p className="text-gray-600 dark:text-gray-300" dir="ltr">+967 784 455 100</p>
             </motion.div>
 
             <motion.div
@@ -688,7 +837,7 @@ const App = () => {
                 {t('send_message')}
               </motion.a>
               <motion.a
-                href="tel:+967770076900"
+                href="tel:+967770076900 & 7784455100"
                 className="inline-flex items-center gap-2 px-6 py-3 border-2 border-blue-600 text-blue-600 dark:text-blue-400 rounded-lg hover:bg-blue-600 hover:text-white transition-colors"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
